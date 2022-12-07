@@ -20,7 +20,7 @@ nav {
   overflow: hidden;
   margin-top: auto;
 }
-nav .logo {
+nav h1 {
   color: #fff;
   font-size: 35px;
   font-weight: 600;
@@ -107,6 +107,7 @@ body,
 html {
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 .bg {
@@ -117,7 +118,7 @@ html {
   height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -150,6 +151,92 @@ input[type="submit"]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: white;
   padding: 20px;
+}
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  width: 100%;
+}
+.item {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+}
+
+.item:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay {
+  background: hsla(300deg, 50%, 25%, 0.8);
+  grid-row: 1 / -1;
+  grid-column: 1 / 1;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+  transform: translateY(100%);
+  transition: transform 1s ease-out;
+}
+
+img {
+  display: block;
+  width: 100%;
+  grid-row: 1 / -1;
+  grid-column: 1 / 1;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-align: right;
+}
+h2 {
+  font-size: 10px;
+}
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 10px;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 10%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: black;
+  color: white;
+}
+
+.fa-twitter {
+  background: black;
+  color: white;
+}
+
+.fa-linkedin {
+  background: black;
+  color: white;
+}
+
+.fa-youtube {
+  background: black;
+  color: white;
+}
+
+.fa-instagram {
+  background: black;
+  color: white;
 }
